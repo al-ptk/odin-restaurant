@@ -14,4 +14,4 @@ const rootStyle = {
 configStyle(root, rootStyle);
 
 
-root.appendChild(home());
+root.appendChild(home()); 
