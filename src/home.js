@@ -34,15 +34,31 @@ export default function homeFactory () {
 
     const strip1 = document.createElement("div");
     configStyle(strip1, stripStyle);
-    strip1.appendChild (burguerPic ({url: "some url", tilt: -1}));
+    strip1.appendChild (burguerPic ({
+        url: "some url", 
+        tilt: -1,
+        name: "High Tides"
+    }));
     strip1.appendChild (logo (logoStyle));
-    strip1.appendChild (burguerPic ({url: "some url", tilt: -1}));
+    strip1.appendChild (burguerPic ({
+        url: "some url", 
+        tilt: 1,
+        name: "Depth's Bellow"
+    }));
     container.appendChild(strip1);
 
     const strip2 = document.createElement("div");
     configStyle(strip2, stripStyle);
-    strip2.appendChild (burguerPic ({url: "some url", tilt: -1}));
-    strip2.appendChild (burguerPic ({url: "some url", tilt: -1}));
+    strip2.appendChild (burguerPic ({
+        url: "some url", 
+        tilt: -1,
+        name: "Fresh Seas"
+    }));
+    strip2.appendChild (burguerPic ({
+        url: "some url", 
+        tilt: 1,
+        name: "Sailor's Loved"
+}));
     container.appendChild(strip2);
 
     return container;

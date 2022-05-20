@@ -1,6 +1,6 @@
-import { configStyle } from './zonks';
+import { configStyle, p } from './zonks';
 import fontSetup from './fontSetup.css';
-import strokeBanner from "./strokebanner.svg";
+import strokeBanner from "./strokebanner.png";
 
 const containerStyle = {
     "width": "30%",
@@ -8,30 +8,35 @@ const containerStyle = {
     "margin": "20px",
     "aspect-ratio": "4 / 3",
     "flex": "0 1 auto",
-    "border": "1px solid white",
-    // "background-color": "#aaa"
 }
 
 const frameStyle = {
     "background-color": "white",
     "width": "100%",
     "height": "100%",
-}
+} 
 
 const picStyle = {
     "background-color": "black",
     "width": "90%",
     "height": "78%",
-    "margin": "5%"
+    "margin": "5%",
 }
 
-const titleStyle = {
-    "display":"block",
-    "background-image": `url(${strokeBanner})`
+const bannerStyle = {
+    "width": "258px",
+    "height": "68px",
+    "background-image": `url(${strokeBanner})`,
+    "display": "flex",
+    "justify-content": "center",
+    "align-items": "center",
+    "color": "white",
+    "font-family": "Sail",
+    "font-size": "30px"
 }
 
 export default function burgerPicFactory (settings) {
-    const {url, tilt, name, description} = {settings};
+    const {url, tilt, name, description} = settings;
 
     const container = document.createElement('div');
     configStyle (container, containerStyle);
@@ -45,11 +50,10 @@ export default function burgerPicFactory (settings) {
     configStyle(pic, picStyle);
     frame.appendChild(pic);
 
-    const burgerTitle = document.createElement('h3');
-    container.appendChild(burgerTitle)
-    burgerTitle.classList.add('sail');
-    burgerTitle.textContent = "Burger Name";
-
+    const banner = document.createElement('div');
+    configStyle(banner, bannerStyle);
+    banner.textContent = name || "Burguer Name";
+    container.appendChild(banner);
 
     return container
 }
