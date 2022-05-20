@@ -65,7 +65,7 @@ export default function burgerPicFactory (settings) {
 
     const info = document.createElement('div');
     container.appendChild(info);
-    info.style.setProperty("border", "1px solid white")
+    // info.style.setProperty("border", "1px solid white")
 
     const banner = document.createElement('div');
     configStyle(banner, bannerStyle);

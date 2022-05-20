@@ -13,3 +13,18 @@ const rootStyle = {
 configStyle(root, rootStyle);
 
 root.appendChild(home()); 
+
+const headerStyle = {
+    "position": "fixed",
+    "top": "0",
+    "left": "0",
+    "width": "100vw",
+    "height": "60px",
+    "background-color": "#141414",
+    "display": "flex",
+    "justify-content": "space-around",
+}
+
+const header = document.createElement("header");
+configStyle(header, headerStyle);
+root.appendChild(header);
