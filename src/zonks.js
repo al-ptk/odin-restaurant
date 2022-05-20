@@ -4,6 +4,11 @@ function configStyle (domObj, styleObj) {
     }
 }
 
+function p (str) {
+    console.log(str);
+}
+
 export { 
-    configStyle 
+    configStyle,
+    p
 };

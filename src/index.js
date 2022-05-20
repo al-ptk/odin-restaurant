@@ -1,14 +1,17 @@
 import blackBG from './blackBG.jpg';
-import badgeFile from './badge.svg';
+import home from './home.js';
+import { configStyle } from './zonks.js';
 
 const root = document.querySelector("#content");
+const rootStyle = {
+    "position": "fixed",
+    "background-color": "black",
+    "background-image": `url(${blackBG})`,
+    "width": "100vw",
+    "height": "100vh"
+}
 
-root.style.backgroundColor = "black"; 
-root.style.width = "100vw";
-root.style.height = "100vh";
-root.style.background = `url(${blackBG})`;
+configStyle(root, rootStyle);
 
-const badge = document.createElement('img');
-badge.src = badgeFile;
 
-root.appendChild(badge);
+root.appendChild(home());
