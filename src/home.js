@@ -2,14 +2,6 @@ import logo from './logo.js';
 import burguerPic from './burgerPic.js';
 import { configStyle } from './zonks.js';
 
-const logoStyle = {
-    "margin": "10px",
-    "width": "30%",
-    "aspect-ratio": "1 / 1",
-    "max-width": "250px",
-    "flex": "0 1 auto"
-};
-
 const homeStyle = {
     "margin": "100px auto",
     "width": "95%",
@@ -37,13 +29,15 @@ export default function homeFactory () {
     strip1.appendChild (burguerPic ({
         url: "some url", 
         tilt: -1,
-        name: "High Tides"
+        name: "High Tides",
+        description: "Some text right here."
     }));
-    strip1.appendChild (logo (logoStyle));
+    strip1.appendChild (logo ());
     strip1.appendChild (burguerPic ({
         url: "some url", 
         tilt: 1,
-        name: "Depth's Bellow"
+        name: "Depth's Bellow",
+        description: "Some text right here."
     }));
     container.appendChild(strip1);
 
@@ -52,12 +46,14 @@ export default function homeFactory () {
     strip2.appendChild (burguerPic ({
         url: "some url", 
         tilt: -1,
-        name: "Fresh Seas"
+        name: "Fresh Seas",
+        description: "Some text right here."
     }));
     strip2.appendChild (burguerPic ({
         url: "some url", 
         tilt: 1,
-        name: "Sailor's Loved"
+        name: "Sailor's Loved",
+        description: "Some text right here."
 }));
     container.appendChild(strip2);
 

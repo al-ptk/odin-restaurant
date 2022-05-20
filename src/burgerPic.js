@@ -8,6 +8,9 @@ const containerStyle = {
     "margin": "20px",
     "aspect-ratio": "4 / 3",
     "flex": "0 1 auto",
+    "display": "flex",
+    "flex-wrap": "wrap",
+    // "border": "1px solid white",
 }
 
 const frameStyle = {
@@ -35,6 +38,16 @@ const bannerStyle = {
     "font-size": "30px"
 }
 
+const ingriStyle = {
+    "border-radius": "25px",
+    "background-color": "white",
+    "color": "black",
+    "font-family": "JetBrains Mono",
+    "font-size": "14px",
+    "letter-spacing": ".3px",
+    "padding": "5px",
+}
+
 export default function burgerPicFactory (settings) {
     const {url, tilt, name, description} = settings;
 
@@ -50,10 +63,19 @@ export default function burgerPicFactory (settings) {
     configStyle(pic, picStyle);
     frame.appendChild(pic);
 
+    const info = document.createElement('div');
+    container.appendChild(info);
+    info.style.setProperty("border", "1px solid white")
+
     const banner = document.createElement('div');
     configStyle(banner, bannerStyle);
     banner.textContent = name || "Burguer Name";
-    container.appendChild(banner);
+    info.appendChild(banner);
+
+    const ingridients = document.createElement('div');
+    configStyle(ingridients, ingriStyle);
+    ingridients.textContent = description;
+    info.appendChild(ingridients);
 
     return container
 }

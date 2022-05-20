@@ -10,8 +10,6 @@ const rootStyle = {
     "width": "100vw",
     "height": "100vh"
 }
-
 configStyle(root, rootStyle);
-
 
 root.appendChild(home()); 
