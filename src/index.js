@@ -15,7 +15,7 @@ const bodyStyle = {
 configStyle(document.body, bodyStyle);
 
 const state = {
-    current: contact ()
+    current: home ()
 }
 
 /* -------------------- */
@@ -83,7 +83,7 @@ for (const item of moduleNames) {
     link.textContent = item;
     configStyle(link, linkStyle);
     configStyle(link, linkDisabledStyle);
-    if (item === "contact") {
+    if (item === "home") {
         configStyle(link, linkActiveStyle);
     }
     linktree.push(header.appendChild(link));
