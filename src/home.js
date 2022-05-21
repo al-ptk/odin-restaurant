@@ -1,6 +1,10 @@
 import logo from './logo.js';
 import burguerPic from './burgerPic.js';
 import { configStyle } from './zonks.js';
+import burger1 from './burguer1.jpg';
+import burger2 from './burguer2.jpg';
+import burger3 from './burguer3.jpg';
+import burger4 from './burguer4.jpg';
 
 const homeStyle = {
     "margin": "100px auto",
@@ -27,14 +31,14 @@ export default function homeFactory () {
     const strip1 = document.createElement("div");
     configStyle(strip1, stripStyle);
     strip1.appendChild (burguerPic ({
-        url: "some url", 
+        url: burger1, 
         tilt: -1,
         name: "High Tides",
         description: "Some text right here."
     }));
     strip1.appendChild (logo ());
     strip1.appendChild (burguerPic ({
-        url: "some url", 
+        url: burger2, 
         tilt: 1,
         name: "Depth's Bellow",
         description: "Some text right here."
@@ -44,13 +48,13 @@ export default function homeFactory () {
     const strip2 = document.createElement("div");
     configStyle(strip2, stripStyle);
     strip2.appendChild (burguerPic ({
-        url: "some url", 
+        url: burger3, 
         tilt: -1,
         name: "Fresh Seas",
         description: "Some text right here."
     }));
     strip2.appendChild (burguerPic ({
-        url: "some url", 
+        url: burger4, 
         tilt: 1,
         name: "Sailor's Loved",
         description: "Some text right here."

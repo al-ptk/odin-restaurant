@@ -10,7 +10,8 @@ const containerStyle = {
     "flex": "0 1 auto",
     "display": "flex",
     "flex-wrap": "wrap",
-    // "border": "1px solid white",
+    "background-color": "#aaa",
+    "position": "relative"
 }
 
 const frameStyle = {
@@ -35,21 +36,13 @@ const bannerStyle = {
     "align-items": "center",
     "color": "white",
     "font-family": "Sail",
-    "font-size": "30px"
-}
-
-const ingriStyle = {
-    "border-radius": "25px",
-    "background-color": "white",
-    "color": "black",
-    "font-family": "JetBrains Mono",
-    "font-size": "14px",
-    "letter-spacing": ".3px",
-    "padding": "5px",
+    "font-size": "30px",
+    "position": "absolute",
+    "bottom": "-15%",
 }
 
 export default function burgerPicFactory (settings) {
-    const {url, tilt, name, description} = settings;
+    const {url, tilt, name} = settings;
 
     const container = document.createElement('div');
     configStyle (container, containerStyle);
@@ -61,21 +54,17 @@ export default function burgerPicFactory (settings) {
 
     const pic = document.createElement('img');
     configStyle(pic, picStyle);
+    pic.src = url;
     frame.appendChild(pic);
-
-    const info = document.createElement('div');
-    container.appendChild(info);
-    // info.style.setProperty("border", "1px solid white")
 
     const banner = document.createElement('div');
     configStyle(banner, bannerStyle);
     banner.textContent = name || "Burguer Name";
-    info.appendChild(banner);
-
-    const ingridients = document.createElement('div');
-    configStyle(ingridients, ingriStyle);
-    ingridients.textContent = description;
-    info.appendChild(ingridients);
+    const orientation = tilt < 0
+        ? "right"
+        : "left";
+    banner.style.setProperty(`${orientation}`, "-20%")
+    container.appendChild(banner);
 
     return container
 }

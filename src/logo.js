@@ -6,15 +6,16 @@ const containerStyle = {
     "margin": "10px",
     "width": "30%",
     "aspect-ratio": "1 / 1",
-    "max-width": "250px",
+    "max-width": "200px",
     "flex": "0 1 auto",
     "display": "flex",
     "flex-flow": "column nowrap",
     "align-items": "center",
+    "margin": "50px",
 }
 
 const logoStyle = {
-    "max-width": "250px",
+    "max-width": "200px",
 };
 
 const shopNameStyle = {
@@ -24,7 +25,7 @@ const shopNameStyle = {
     "padding": "0 10px",
     "text-align": "center",
     "font-family": "Sail",
-    "font-size": "36px",
+    "font-size": "32px",
     "width": "90%",
     "border": "3px solid"
 }
