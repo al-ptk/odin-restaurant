@@ -14,7 +14,9 @@ const bodyStyle = {
 }
 configStyle(document.body, bodyStyle);
 
-const state = {current: home()}
+const state = {
+    current: menu()
+}
 
 /* -------------------- */
 const rootStyle = {
