@@ -29,16 +29,16 @@ export default function boardComponent (boardConfig) {
     configStyle(container, boardStyle);
     configStyle(container, localStyling);
 
-    const titleElem = document.createElement("h3");
-    configStyle(titleElem, boardTitleStyle);
-    titleElem.textContent = title;
-    container.appendChild(titleElem);
+    const boardTitle = document.createElement("h3");
+    configStyle(boardTitle, boardTitleStyle);
+    boardTitle.textContent = title;
+    container.appendChild(boardTitle);
 
     for (const item in items) {
-        const elem = document.createElement("p");
-        configStyle(elem, boardItemStyle);
-        elem.textContent = `${item} ------ ${items[item]}`
-        container.appendChild(elem);
+        const boardItem = document.createElement("p");
+        configStyle(boardItem, boardItemStyle);
+        boardItem.textContent = `${item} ------ ${items[item]}`
+        container.appendChild(boardItem);
     }
 
     return container

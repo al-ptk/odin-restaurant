@@ -43,8 +43,7 @@ const bannerStyle = {
     "bottom": "-15%",
 }
 
-export default function burgerPicFactory (settings) {
-    const {url, tilt, name} = settings;
+export default function burgerPicFactory ({url, tilt, name}) {
 
     const container = document.createElement('div');
     configStyle (container, containerStyle);
