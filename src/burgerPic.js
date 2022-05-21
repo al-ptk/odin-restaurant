@@ -11,13 +11,15 @@ const containerStyle = {
     "display": "flex",
     "flex-wrap": "wrap",
     "background-color": "#aaa",
-    "position": "relative"
+    "position": "relative",
+    "box-shadow": "-2px 2px 2px 0px rgba(0,0,0,.6)",
 }
 
 const frameStyle = {
     "background-color": "white",
     "width": "100%",
     "height": "100%",
+    "box-shadow": "-2px 2px 2px 0px rgba(0,0,0,.4)",
 } 
 
 const picStyle = {
