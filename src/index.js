@@ -88,10 +88,10 @@ for (const item of moduleNames) {
 }
 
 function changeScreen (e) {
+    if (!state.current) return;
     const self = e.target;
     linktree.forEach(elem => configStyle(elem, linkDisabledStyle));
     configStyle(self, linkActiveStyle);
-    p(self.textContent);
     root.removeChild(state.current);
     switch (self.textContent) {
         case 'home':
@@ -100,10 +100,12 @@ function changeScreen (e) {
             break;
         case 'menu':
             state.current = menu();
+            p(state.current)
             root.appendChild(state.current)
             break;
         case 'contact':
             state.current = contact();
+            p(state.current)
             root.appendChild(state.current)
             break;
     }
