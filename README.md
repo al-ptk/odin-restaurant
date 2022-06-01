@@ -1,5 +1,7 @@
 # odin-restaurant
 
+[See it live.](https://al-ptk.github.io/odin-restaurant/)
+
 Things I learned:
 
 - To use webpack. Webpack is tricky and I do not claim to get a full hold of it. However, I did get used to the quirk of changing the config not updating the --watch mode. Also, loading extra resources is kind of straightfoward. Kind of. I failed in trying to import ttf fonts and I don't know why (to be fair, I haven't searched for it either).
