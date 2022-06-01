@@ -1,6 +1,6 @@
 # odin-restaurant
 
-[>>> See it live. <<<](https://al-ptk.github.io/odin-restaurant/)
+[**>>> See it live. <<<**](https://al-ptk.github.io/odin-restaurant/)
 
 Things I learned:
 
